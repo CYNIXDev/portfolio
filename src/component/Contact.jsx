@@ -65,7 +65,7 @@ export default function Contact({ templateId, serviceId, pbKey }) {
       </h2>
 
       <form ref={form} onSubmit={sendEmail} className="flex flex-col space-y-8">
-        <div>
+        <div className="w-full">
           <label htmlFor="email" className="mb-2 block ">
             Your email
           </label>
@@ -74,10 +74,11 @@ export default function Contact({ templateId, serviceId, pbKey }) {
             value={message.email}
             type="email"
             name="email"
-            className="block w-full rounded-lg bg-black bg-opacity-30 p-3 text-sm shadow-sm "
-            placeholder="name@domain.com"
+            className="placeholder-opacity-0 block w-full rounded-lg bg-black bg-opacity-30 p-3 text-sm shadow-sm "
+            placeholder="Your email address"
             required
           />
+          <input type="text" className="w-full" />
         </div>
         <div>
           <label htmlFor="name" className="mb-2 block">
@@ -113,6 +114,7 @@ export default function Contact({ templateId, serviceId, pbKey }) {
           Send message
         </button>
       </form>
+
     </section>
   );
 }

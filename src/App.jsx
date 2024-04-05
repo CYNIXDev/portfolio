@@ -31,34 +31,34 @@ function App() {
       document.body.style.overflow = "auto";
     }
   }
-  const [mouse, setMouse] = useState({ x: 0, y: 0 });
+  const [mouse, setMouse] = useState({ x: 300, y: 150 });
 
   useEffect(() => {
-    console.log("useEffect ทำงาน; navCheck=", navCheck);
-    // handle mouse move cursor
-    window.addEventListener("mousemove", (e) =>
-      setMouse({ x: e.clientX, y: e.clientY }),
-    );
 
-    // // handle windows resize
-    // window.addEventListener(
-    //   "resize",
-    //   () => window.innerWidth > 768 && setNavCheck(false),
-    // );
+
+    // handle mouse move cursor not touch screen
+    if (!('ontouchstart' in window)) {
+      window.addEventListener("mousemove", (e) =>
+        setMouse({ x: e.clientX, y: e.clientY }),
+      );
+    }
+    // handle windows resize
+    window.addEventListener(
+      "resize",
+      () => window.innerWidth > 768 && setNavCheck(false),
+    );
 
     let prevScrollpos = window.scrollY;
     window.onscroll = function () {
       const currentScrollPos = window.scrollY;
       const navBar = document.getElementById("navbar");
-      if (prevScrollpos > currentScrollPos) {
-        console.log('check nav: ', navCheck);
+      if (prevScrollpos > currentScrollPos || currentScrollPos < 25) {
         navBar.style.top = "0";
         navBar.style.backgroundColor = "#0a192f";
-        if (currentScrollPos === 0) {
+        if (currentScrollPos < 100) {
           navBar.style.backgroundColor = "rgba(0, 0, 0, 0)";
         }
       } else if (!navCheck) {
-        console.log('check nav: ', navCheck);
         navBar.style.top = "-150px";
       }
       prevScrollpos = currentScrollPos;
@@ -68,15 +68,15 @@ function App() {
       window.removeEventListener("mousemove", (e) =>
         setMouse({ x: e.clientX, y: e.clientY }),
       );
-      // window.removeEventListener("resize", () => {
-      //   return window.innerWidth > 768 && setNavCheck(false);
-      // });
+      window.removeEventListener("resize", () => {
+        return window.innerWidth > 768 && setNavCheck(false);
+      });
     };
   }, [navCheck]);
 
   return (
     <>
-      <CircleBackground {...mouse} />
+      {/* <CircleBackground {...mouse} /> */}
 
       {/* Navbar */}
       <header
@@ -96,8 +96,11 @@ function App() {
             ? "container pointer-events-none relative mx-auto h-fit flex-col items-center px-5 blur-sm md:px-20 xl:px-40"
             : " container relative mx-auto h-fit flex-col items-center px-5 md:px-20 xl:px-40"
         }
+
         onClick={navCheck ? () => handleNav() : null}
       >
+
+
         <Hero />
         {/* About */}
         <Title key={uuidv4()} id="about" text="About Me" />

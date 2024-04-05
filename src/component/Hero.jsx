@@ -4,7 +4,8 @@ import profile1 from "../assets/profile1.jpg";
 export default function Main() {
   return (
     <>
-      <section className="relative flex h-screen justify-start">
+
+      <section className="relative flex h-screen justify-start items-center">
         {/* Hero */}
         <section className="flex max-h-fit items-center gap-7 md:justify-center">
           {/* Image */}
