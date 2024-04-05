@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+nav > ul > li {
+  @apply cursor-pointer py-2 duration-300 hover:text-Green;
+}
+
+@layer components {
+  .iconHover {
+    @apply transform cursor-pointer transition duration-200 hover:-translate-y-1  hover:text-Green;
+  }
+  .navHover {
+    @apply cursor-pointer duration-200 hover:text-Green;
+  }
+}
+
+html {
+  @apply scroll-smooth;
+}
