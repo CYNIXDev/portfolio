@@ -31,7 +31,7 @@ function App() {
       document.body.style.overflow = "auto";
     }
   }
-  const [mouse, setMouse] = useState({ x: 300, y: 150 });
+  const [mouse, setMouse] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
     // handle mouse move cursor not touch screen
@@ -74,7 +74,7 @@ function App() {
 
   return (
     <>
-      {/* <CircleBackground {...mouse} /> */}
+      <CircleBackground {...mouse} />
 
       {/* Navbar */}
       <header
@@ -98,8 +98,8 @@ function App() {
       >
         <Hero />
         {/* About */}
-        <Title key={uuidv4()} id="about" text="About Me" />
         <section className="mb-32">
+          <Title key={uuidv4()} id="about" text="About Me" />
           <About />
         </section>
 
