@@ -15,22 +15,20 @@ export default function ProjectCard({
         <div
           className={` ${isLeft ? " md:left-0 " : "md:right-0"} h-full md:absolute md:h-3/5 lg:h-4/5 `}
         >
-
           <img
-            className="h-full object-cover md:object-contain md:p-0 md:opacity-100 opacity-40  md:blur-0  "
+            className="h-full object-cover opacity-40 md:object-contain md:p-0 md:opacity-100  md:blur-0  "
             src={image}
             alt=""
           />
-          <div className="h-full w-full bg-DarkBlue bg-cover transition-all duration-300 absolute top-0 left-0 opacity-80  md:hidden"></div>
-
+          <div className="absolute left-0 top-0 h-full w-full bg-DarkBlue bg-cover opacity-80 transition-all duration-300  md:hidden"></div>
         </div>
 
         {/* Content */}
         <section
           className={
             isLeft
-              ? "absolute right-0 z-10 flex h-full w-full flex-col justify-center gap-5 px-8 md:max-w-[400px] md:items-end md:px-0 md:text-right lg:max-w-[500px] text-LightSky"
-              : "absolute left-0 z-10 flex h-full w-full flex-col justify-center gap-5 px-8 md:max-w-[400px] md:px-0 lg:max-w-[500px] text-LightSky"
+              ? "absolute right-0 z-10 flex h-full w-full flex-col justify-center gap-5 px-8 text-LightSky md:max-w-[400px] md:items-end md:px-0 md:text-right lg:max-w-[500px]"
+              : "absolute left-0 z-10 flex h-full w-full flex-col justify-center gap-5 px-8 text-LightSky md:max-w-[400px] md:px-0 lg:max-w-[500px]"
           }
         >
           <h3 className="text-2xl font-bold text-Green">{title}</h3>

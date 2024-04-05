@@ -74,11 +74,10 @@ export default function Contact({ templateId, serviceId, pbKey }) {
             value={message.email}
             type="email"
             name="email"
-            className="placeholder-opacity-0 block w-full rounded-lg bg-black bg-opacity-30 p-3 text-sm shadow-sm "
+            className="block w-full rounded-lg bg-black bg-opacity-30 p-3 text-sm placeholder-opacity-0 shadow-sm "
             placeholder="Your email address"
             required
           />
-          <input type="text" className="w-full" />
         </div>
         <div>
           <label htmlFor="name" className="mb-2 block">
@@ -114,7 +113,6 @@ export default function Contact({ templateId, serviceId, pbKey }) {
           Send message
         </button>
       </form>
-
     </section>
   );
 }

@@ -18,9 +18,8 @@ export default function About() {
 
             <ul className="list-inside list-disc pl-5 ps-3 pt-2">
               <li>
-                Fontend ดูแล Support ลูกค้าที่ติดปัญหาทางด้าน
-                Technical ต่างๆ ที่ส่งผลกระทบให้ไม่สามารถใช้งาน Software
-                ของบริษัทได้
+                Fontend ดูแล Support ลูกค้าที่ติดปัญหาทางด้าน Technical ต่างๆ
+                ที่ส่งผลกระทบให้ไม่สามารถใช้งาน Software ของบริษัทได้
               </li>
               <li>
                 Backend ดูแลระบบหลังบ้านอาทิเช่น Server On-Premise&On-Cloud,
@@ -36,17 +35,33 @@ export default function About() {
               </li>
             </ul>
             <br />
-            <p>และงานด้านสุดท้ายนี่แหละครับที่ทำให้ผมรู้จักกับ Frontend Developer ซึ่งต้องใช้ทักษะทั้งด้านเทคนิคคอลและความคิดสร้างสรรค์ เพื่อเขียนเว็บออกมาให้สวยงาม
-              จากลักษณะนิสัยที่ชอบเรียนรู้สิ่งใหม่ๆอยู่เสมอ ผมจึงเริ่มศึกษาและเรียนรู้ด้วยตัวเองจากช่องทางออนไลน์ต่างๆ เพื่อที่จะได้เป็น Frontend Developer ตามที่หวังไว้ครับ</p>
+            <p>
+              และงานด้านสุดท้ายนี่แหละครับที่ทำให้ผมรู้จักกับ Frontend Developer
+              ซึ่งต้องใช้ทักษะทั้งด้านเทคนิคคอลและความคิดสร้างสรรค์
+              เพื่อเขียนเว็บออกมาให้สวยงาม
+              จากลักษณะนิสัยที่ชอบเรียนรู้สิ่งใหม่ๆอยู่เสมอ
+              ผมจึงเริ่มศึกษาและเรียนรู้ด้วยตัวเองจากช่องทางออนไลน์ต่างๆ
+              เพื่อที่จะได้เป็น Frontend Developer ตามที่หวังไว้ครับ
+            </p>
 
             <br />
-            <p className="text-Green font-bold">
-              STACK: <span className="text-LightSky">React.js, Tailwind CSS, Node.js, Express.js, EJS, jQuery, PostgreSQL, JavaScript, Python, CSS, HTML,</span>
+            <p className="font-bold text-Green">
+              STACK:{" "}
+              <span className="text-LightSky">
+                React.js, Tailwind CSS, Node.js, Express.js, EJS, jQuery,
+                PostgreSQL, JavaScript, Python, CSS, HTML,
+              </span>
             </p>
-            <p className="text-Green font-bold">
-              TOOL: <span className="text-LightSky">VS Code, git/github, Figma, illustrator, Photoshop</span></p>
-            <p className="text-Green font-bold opacity-50">
-              INCOMING: <span className="text-LightSky">TypeScript, Next.js, Docker</span></p>
+            <p className="font-bold text-Green">
+              TOOL:{" "}
+              <span className="text-LightSky">
+                VS Code, git/github, Figma, illustrator, Photoshop
+              </span>
+            </p>
+            <p className="font-bold text-Green opacity-50">
+              INCOMING:{" "}
+              <span className="text-LightSky">TypeScript, Next.js, Docker</span>
+            </p>
           </section>
           <div className="relative w-fit lg:self-start ">
             <div className="absolute h-full w-full  justify-items-end justify-self-end bg-Green  mix-blend-color transition-all duration-300 hover:opacity-0"></div>

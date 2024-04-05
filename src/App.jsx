@@ -15,9 +15,9 @@ function App() {
   //use for check left right project card
   let isLeft = true;
 
-  const templateId = import.meta.env.VITE_TEMPLATE_ID
-  const serviceId = import.meta.env.VITE_SERVICE_ID
-  const pbKey = import.meta.env.VITE_PUBLIC_KEY
+  const templateId = import.meta.env.VITE_TEMPLATE_ID;
+  const serviceId = import.meta.env.VITE_SERVICE_ID;
+  const pbKey = import.meta.env.VITE_PUBLIC_KEY;
 
   const [navCheck, setNavCheck] = useState(false);
 
@@ -34,10 +34,8 @@ function App() {
   const [mouse, setMouse] = useState({ x: 300, y: 150 });
 
   useEffect(() => {
-
-
     // handle mouse move cursor not touch screen
-    if (!('ontouchstart' in window)) {
+    if (!("ontouchstart" in window)) {
       window.addEventListener("mousemove", (e) =>
         setMouse({ x: e.clientX, y: e.clientY }),
       );
@@ -81,7 +79,7 @@ function App() {
       {/* Navbar */}
       <header
         id="navbar"
-        className="fixed top-0 z-50 h-[100px] w-[100%] px-5 text-sm opacity-95 backdrop-blur-sm transition-all duration-500 sm:px-16 lg:px-28"
+        className="fixed top-0 z-50 h-[100px] w-[100%] px-5 text-sm opacity-95 transition-all duration-500 sm:px-16 lg:px-28"
       >
         <Header navCheck={navCheck} handleNav={handleNav} />
       </header>
@@ -96,11 +94,8 @@ function App() {
             ? "container pointer-events-none relative mx-auto h-fit flex-col items-center px-5 blur-sm md:px-20 xl:px-40"
             : " container relative mx-auto h-fit flex-col items-center px-5 md:px-20 xl:px-40"
         }
-
         onClick={navCheck ? () => handleNav() : null}
       >
-
-
         <Hero />
         {/* About */}
         <Title key={uuidv4()} id="about" text="About Me" />
@@ -132,8 +127,11 @@ function App() {
           id="contact-me"
           className="flex h-screen w-full flex-col items-center  justify-center pt-20"
         >
-          <Contact templateId={templateId} serviceId={serviceId}
-            pbKey={pbKey} />
+          <Contact
+            templateId={templateId}
+            serviceId={serviceId}
+            pbKey={pbKey}
+          />
         </section>
       </main>
       <Footer />
