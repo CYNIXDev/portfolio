@@ -1,15 +1,6 @@
 import cv from "../assets/pdf/cv_nopparit.pdf";
 
 export default function Header({ navCheck, handleNav }) {
-  function handleBtn() {
-    const btn = document.getElementById("resumeButton");
-    btn.classList.add("animate-ping");
-    setTimeout(() => {
-      window.open(cv, "_blank");
-      btn.classList.remove("animate-ping");
-    }, 1000); // Adjust timing to match animation duration
-  }
-
   return (
     <>
       <nav className="flex h-full items-center justify-between transition-all duration-500">
@@ -31,26 +22,22 @@ export default function Header({ navCheck, handleNav }) {
         </a>
 
         {/* Nav */}
-        <div className="fixed right-0 top-0 h-screen w-3/5 md:static md:h-full md:w-auto">
+        <div className={`fixed right-0 top-0 h-screen w-3/5 md:static md:h-full md:w-auto ${navCheck ? 'visible bg-DarkBlue' : 'hidden md:flex'}`}>
+
           <ul
-            className={`flex h-full flex-col items-center justify-center gap-7 md:flex-row md:justify-end ${navCheck ? "visible absolute right-0 top-0 bg-DarkBlue px-20 opacity-95 md:flex" : "hidden md:flex"} `}
+            className={`flex w-full h-full flex-col items-center justify-center gap-7 md:flex-row md:justify-end absolute right-0 top-0  px-10 opacity-95 md:flex`}
           >
-            <li className="navHover">
-              <a href="#about">About Me</a>
-            </li>
-            <li className="navHover">
-              <a href="#project">Project</a>
-            </li>
-            <li className="navHover">
-              <a href="#contact-me">Contact Me</a>
-            </li>
-            <button
-              onClick={handleBtn}
+            <a className="py-2 navHover" href="#about">About Me</a>
+            <a className="py-2 navHover" href="#project">Project</a>
+            <a className="py-2 navHover" href="#contact-me">Contact Me</a>
+            <a
               id="resumeButton"
               className="rounded-md border-2 border-Green px-5 py-2 "
+              href={cv}
+              target="_blank"
             >
               RESUME
-            </button>
+            </a>
           </ul>
         </div>
         <i
