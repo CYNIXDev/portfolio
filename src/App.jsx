@@ -125,7 +125,7 @@ function App() {
         {/* Contact */}
         <section
           id="contact-me"
-          className="flex min-h-screen h-fit w-full flex-col items-center  justify-center pt-20"
+          className="flex h-fit min-h-screen w-full flex-col items-center  justify-center pt-20"
         >
           <Contact
             templateId={templateId}

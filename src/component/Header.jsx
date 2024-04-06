@@ -22,14 +22,21 @@ export default function Header({ navCheck, handleNav }) {
         </a>
 
         {/* Nav */}
-        <div className={`fixed right-0 top-0 h-screen w-3/5 md:static md:h-full md:w-auto ${navCheck ? 'visible bg-DarkBlue' : 'hidden md:flex'}`}>
-
+        <div
+          className={`fixed right-0 top-0 h-screen w-3/5 md:static md:h-full md:w-auto ${navCheck ? "visible bg-DarkBlue" : "hidden md:flex"}`}
+        >
           <ul
-            className={`flex w-full h-full flex-col items-center justify-center gap-7 md:flex-row md:justify-end absolute right-0 top-0  px-10 opacity-95 md:flex`}
+            className={`absolute right-0 top-0 flex h-full w-full flex-col items-center justify-center gap-7 px-10 opacity-95  md:flex md:flex-row md:justify-end`}
           >
-            <a className="py-2 navHover" href="#about">About Me</a>
-            <a className="py-2 navHover" href="#project">Project</a>
-            <a className="py-2 navHover" href="#contact-me">Contact Me</a>
+            <a className="navHover py-2" href="#about">
+              About Me
+            </a>
+            <a className="navHover py-2" href="#project">
+              Project
+            </a>
+            <a className="navHover py-2" href="#contact-me">
+              Contact Me
+            </a>
             <a
               id="resumeButton"
               className="rounded-md border-2 border-Green px-5 py-2 "
