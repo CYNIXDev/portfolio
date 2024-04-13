@@ -1,6 +1,24 @@
 import React from "react";
+import { useEffect, useState } from "react";
 
-export default function CircleBackground({ y, x }) {
+export default function CircleBackground() {
+  const [mouse, setMouse] = useState({ x: 0, y: 0 });
+  const { x, y } = mouse;
+  useEffect(() => {
+    // handle mouse move cursor not touch screen
+    if (!("ontouchstart" in window)) {
+      window.addEventListener("mousemove", (e) =>
+        setMouse({ x: e.clientX, y: e.clientY }),
+      );
+    }
+
+    return () => {
+      window.removeEventListener("mousemove", (e) =>
+        setMouse({ x: e.clientX, y: e.clientY }),
+      );
+    };
+  }, []);
+
   return (
     <div
       style={{

@@ -1,15 +1,19 @@
 import { useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import projectsData from "./assets/project/data";
-import About from "./component/About";
-import Header from "./component/Header";
-import Title from "./component/Title";
-import Hero from "./component/Hero";
-import ProjectCard from "./component/ProjectCard";
-import Contact from "./component/Contact";
-import CircleBackground from "./component/CircleBackground";
-import Footer from "./component/Footer";
-import NavSocial from "./component/NavSocial";
+
+//Integate all component in one file on index.js and config vite component path
+import {
+  About,
+  Header,
+  Title,
+  Hero,
+  ProjectCard,
+  Contact,
+  CircleBackground,
+  Footer,
+  NavSocial,
+} from "component";
 
 function App() {
   //use for check left right project card
@@ -31,41 +35,13 @@ function App() {
       document.body.style.overflow = "auto";
     }
   }
-  const [mouse, setMouse] = useState({ x: 0, y: 0 });
-
   useEffect(() => {
-    // handle mouse move cursor not touch screen
-    if (!("ontouchstart" in window)) {
-      window.addEventListener("mousemove", (e) =>
-        setMouse({ x: e.clientX, y: e.clientY }),
-      );
-    }
     // handle windows resize
     window.addEventListener(
       "resize",
       () => window.innerWidth > 768 && setNavCheck(false),
     );
-
-    let prevScrollpos = window.scrollY;
-    window.onscroll = function () {
-      const currentScrollPos = window.scrollY;
-      const navBar = document.getElementById("navbar");
-      if (prevScrollpos > currentScrollPos || currentScrollPos < 25) {
-        navBar.style.top = "0";
-        navBar.style.backgroundColor = "#0a192f";
-        if (currentScrollPos < 100) {
-          navBar.style.backgroundColor = "rgba(0, 0, 0, 0)";
-        }
-      } else if (!navCheck) {
-        navBar.style.top = "-150px";
-      }
-      prevScrollpos = currentScrollPos;
-    };
-
     return () => {
-      window.removeEventListener("mousemove", (e) =>
-        setMouse({ x: e.clientX, y: e.clientY }),
-      );
       window.removeEventListener("resize", () => {
         return window.innerWidth > 768 && setNavCheck(false);
       });
@@ -74,15 +50,10 @@ function App() {
 
   return (
     <>
-      <CircleBackground {...mouse} />
+      <CircleBackground />
 
-      {/* Navbar */}
-      <header
-        id="navbar"
-        className="fixed top-0 z-50 h-[100px] w-[100%] px-5 text-sm opacity-95 transition-all duration-500 sm:px-16 lg:px-28"
-      >
-        <Header navCheck={navCheck} handleNav={handleNav} />
-      </header>
+      {/* Header */}
+      <Header navCheck={navCheck} handleNav={handleNav} />
 
       {/* left right Nav Social */}
       <NavSocial />
@@ -90,11 +61,12 @@ function App() {
       {/* Main Content */}
       <main
         className={
+          //if navCheck is true then add pointer-events-none and blur-sm class on main tag
           navCheck
             ? "container pointer-events-none relative mx-auto h-fit flex-col items-center px-5 blur-sm md:px-20 xl:px-40"
-            : " container relative mx-auto h-fit flex-col items-center px-5 md:px-20 xl:px-40"
+            : "container relative mx-auto h-fit flex-col items-center px-5 md:px-20 xl:px-40"
         }
-        onClick={navCheck ? () => handleNav() : null}
+        onClick={navCheck && handleNav}
       >
         <Hero />
         {/* About */}
