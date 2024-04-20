@@ -1,5 +1,6 @@
 import project1 from "./project1.png";
 import project2 from "./project2.png";
+import project3 from "./project3.png";
 
 const projectsData = [
   {
@@ -17,6 +18,13 @@ const projectsData = [
       "ถูกพัฒนาขึ้นเพื่อสำรองข้อมูล Database SQL และ PorsgreSQL โดยจะเขียนเชื่อมกับ Microsoft Graph API เพื่อซิงค์ไฟล์ Backup ไปยัง OneDrive ของผู้ใช้งาน",
     image: project1,
     stack: ["Python", "Microsoft Graph API", "SQL", "PostgreSQL"],
+  },
+  {
+    title: "Porfolio Website",
+    description:
+      "เว็บสำหรับรวบรวมผลงานและข้อมูลส่วนตัว โดยใช้ React ในการพัฒนา และใช้ Tailwind CSS ในการออกแบบ",
+    image: project3,
+    stack: ["React", "Tailwind", "Responsive Design"],
   },
   // Add more project objects as needed
 ];
