@@ -8,40 +8,29 @@ export default function About() {
         <section className="flex flex-col items-center justify-center gap-5 lg:flex-row">
           <section>
             <p>
-              สวัสดีครับ ผมชื่อนายนพฤทธิ์ สละศรี ชื่อเล่น ปาย อายุ 27 ปีครับ
+              Hello, my name is Nopparit Salasri, nickname Pai, and I am 27 years old.
               <br />
-              จุดเริ่มต้นในการเป็น Frontend Developer
-              ของผมเริ่มต้นจากการที่ได้ทำงานในตำแหน่ง Technical Support
-              ควบคู่กับตำแหน่ง Graphic Design และ Web Admin.
-              ทำให้มีการทำงานร่วมกับหลายๆส่วน ไม่ว่าจะเป็น
+              My journey to becoming a Frontend Developer started when I worked in the positions of Technical Support, Graphic Design, and Web Admin. These roles allowed me to collaborate with various departments, such as:
             </p>
 
             <ul className="list-inside list-disc pl-5 ps-3 pt-2">
               <li>
-                Fontend ดูแล Support ลูกค้าที่ติดปัญหาทางด้าน Technical ต่างๆ
-                ที่ส่งผลกระทบให้ไม่สามารถใช้งาน Software ของบริษัทได้
+                Frontend: Providing technical support to customers facing issues that affected their ability to use the company's software.
               </li>
               <li>
-                Backend ดูแลระบบหลังบ้านอาทิเช่น Server On-Premise&On-Cloud,
+                Backend: Managing backend systems such as On-Premise & On-Cloud Servers, Database Servers, and Firewalls.
                 Database Server, Firewall
               </li>
               <li>
-                ทำงานร่วมกับทีม Designer เพื่อออกแบบและจัดทำสื่อ Info graphic,
-                Vdo ประชาสัมพันธ์ลูกค้า
+                Collaborating with the Design Team to create and design promotional media such as infographics and videos for customer outreach.
               </li>
               <li>
-                ทำงานร่วมกับทีม Marketing ดูแลและอัพเดทข้อมูล
-                สินค้าและบริการบนเว็บไซต์สำเร็จรูปของบริษัท
+                Working with the Marketing Team to maintain and update information about the company's products and services on the website.
               </li>
             </ul>
             <br />
             <p>
-              ในส่วนงานของการดูแลเว็บไซต์ทำให้ผมรู้จักกับ Frontend Developer
-              งานที่ต้องใช้ทักษะทั้งด้านเทคนิคคอลและความคิดสร้างสรรค์
-              เพื่อเขียนเว็บออกมาให้สวยงาม
-              จากลักษณะนิสัยที่ชอบเรียนรู้สิ่งใหม่ๆอยู่เสมอ
-              ผมจึงเริ่มศึกษาและเรียนรู้ด้วยตัวเองจากช่องทางออนไลน์ต่างๆ
-              เพื่อที่จะได้เป็น Frontend Developer ตามที่หวังไว้ครับ
+              My involvement in website management introduced me to Frontend Development, a role that requires both technical skills and creativity to design visually appealing websites. With my natural curiosity and love for learning new things, I began self-studying through various online resources to become the Frontend Developer I aspire to be
             </p>
 
             <br />
